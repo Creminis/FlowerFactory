@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://k6f1rsc2aswk"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 687.0
+offset_top = 20.0
+offset_right = 735.0
+offset_bottom = 43.0
+text = "Pollen"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 784.0
+offset_top = 20.0
+offset_right = 824.0
+offset_bottom = 43.0
+text = "Sun"
