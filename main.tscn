@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpqpnvsij4ks"]
+
+[ext_resource type="PackedScene" uid="uid://hg27cxiowf2c" path="res://flower.tscn" id="1_kuy8q"]
+[ext_resource type="Texture2D" uid="uid://cs24pl31ynu6e" path="res://daisy-flower-10-weed-fun.jpg" id="2_i33oh"]
+
+[node name="Main" type="Node"]
+
+[node name="Flower" parent="." instance=ExtResource("1_kuy8q")]
+position = Vector2(189, 511)
+scale = Vector2(0.224219, 0.233568)
+texture = ExtResource("2_i33oh")
+
+[editable path="Flower"]
