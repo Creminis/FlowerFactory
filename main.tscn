@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgpqpnvsij4ks"]
+
+[ext_resource type="PackedScene" uid="uid://hg27cxiowf2c" path="res://flower.tscn" id="1_kuy8q"]
+[ext_resource type="Script" path="res://main.gd" id="1_mdinv"]
+[ext_resource type="Texture2D" uid="uid://cs24pl31ynu6e" path="res://daisy-flower-10-weed-fun.jpg" id="2_i33oh"]
+[ext_resource type="PackedScene" uid="uid://k6f1rsc2aswk" path="res://hud.tscn" id="3_pes08"]
+[ext_resource type="Script" path="res://hud.gd" id="4_0foh7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itx01"]
+size = Vector2(642.23, 428.141)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_mdinv")
+
+[node name="HUD" parent="." instance=ExtResource("3_pes08")]
+script = ExtResource("4_0foh7")
+
+[node name="Flower" parent="." instance=ExtResource("1_kuy8q")]
+position = Vector2(277, 564)
+scale = Vector2(0.224219, 0.233568)
+texture = ExtResource("2_i33oh")
+metadata/_edit_group_ = true
+
+[node name="Area2D" parent="Flower" index="0"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" parent="Flower/Area2D" index="0"]
+position = Vector2(2.1054e-05, -1.71757e-05)
+shape = SubResource("RectangleShape2D_itx01")
+metadata/_edit_group_ = true
+
+[connection signal="input_event" from="Flower/Area2D" to="HUD" method="_on_daisy_pressed"]
+
+[editable path="Flower"]
